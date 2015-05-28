@@ -1,0 +1,15 @@
+# --------------------
+# OSX Files
+# --------------------
+.DS_Store
+
+# --------------------
+# Sublime Text Files
+# --------------------
+*.sublime-project
+*.sublime-workspace
+
+# --------------------
+# Project Files
+# --------------------
+_site/
