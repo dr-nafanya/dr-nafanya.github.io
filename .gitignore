@@ -13,3 +13,5 @@
 # Project Files
 # --------------------
 _site/
+node_modules/
+build/
