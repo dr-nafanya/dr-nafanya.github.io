@@ -4,6 +4,12 @@ var stylus = require('gulp-stylus');
 
 var CODE_HIGHLIGHT_CSS = "zenburn.css";
 
+gulp.task('concat-js', function () {
+  return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+    .pipe(concat('site.js'))
+    .pipe(gulp.dest('./build/js'));
+});
+
 gulp.task('compile-css', function () {
   return gulp.src('./styl/*.styl')
     .pipe(stylus({ compress: true }))
@@ -22,4 +28,4 @@ gulp.task('concat-css', function () {
     .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('default', ['compile-css', 'concat-css']);
+gulp.task('default', ['compile-css', 'concat-css', 'concat-js']);
